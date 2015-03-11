@@ -2,7 +2,7 @@
 
 Hi everyone,
 
-Thanks for attending office hours earlier today (Tuesday, March 11) about the
+Thanks for attending office hours earlier today (Tuesday, March 10) about the
 Nanodegree program in general, actions, and outlets.
 
 If you missed it, you can get to it by navigating [here][hangout].
