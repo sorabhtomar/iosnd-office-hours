@@ -60,7 +60,7 @@ that knowing every single detail about syntax is not something that
 professional developers do. Instead, developers are very good at parsing
 through documentation to piece together their logic in code.
 
-> In lesson to of Intro to iOS Development, when we were asked to add the Stop
+> In lesson two of Intro to iOS Development, when we were asked to add the Stop
 > Record button, I set the Image Set to use vector images. The instructor did
 > it differently. Do I need to change my implementation before submitting my
 > project?
