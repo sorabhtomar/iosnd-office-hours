@@ -7,7 +7,7 @@ Nanodegree program in general, actions, and outlets.
 
 If you missed it, you can get to it by navigating [here][hangout].
 
-Here's what Miriam, Eden, Gabrielle and I (Chrisna) covered:
+Here's what Miriam, Eden, Chrisna, and Gabrielle covered:
 
 ## The Nanodegree program
 
@@ -72,6 +72,22 @@ your solution does not have to match the instructor's solution exactly.
 
 Neither approach is discussed very much in the Nanodegree but we hope to add
 resources about testing and debugging in the near future.
+
+## Actions and Outlets
+
+Eden and Chrisna did a demo!
+
+### Introduction
+
+### Actions
+
+### Outlets
+
+### Outlet Collections
+
+## Extra Questions
+
+Gabrielle joined us for an extended question and answer period after the demo.
 
 [hangout]: https://plus.google.com/u/0/events/c824hakd0ntm4maenep575897e8
 [portal]: https://www.udacity.com/course/nd003
