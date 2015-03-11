@@ -9,7 +9,7 @@ If you missed it, you can get to it by navigating [here][hangout].
 
 Here's what Miriam, Eden, Chrisna, and Gabrielle covered:
 
-## The Nanodegree program
+## The Nanodegree Program
 
 If you haven't seen your [Nanodegree portal][portal] yet, you should take a
 look!
