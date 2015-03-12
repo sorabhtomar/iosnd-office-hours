@@ -73,11 +73,70 @@ your solution does not have to match the instructor's solution exactly.
 Neither approach is discussed very much in the Nanodegree but we hope to add
 resources about testing and debugging in the near future.
 
+> I signed up last night so I haven't had the time to go over the files in 
+> detail but I skimmed over some of the stuff. My questions: In what ways do 
+> you guys (Udacity) help the students prepare for a job? If possible can you
+> give an example?
+
+The Nanodegree helps you develop a project portfolio, which gives you the skills
+you need to be successful and something to show off to potential employers. We 
+also offer career development activities to help you learn how to market yourself, 
+like interviews with hiring managers, how to create an awesome LinkedIn profile, 
+how to do an informational interview, info about technical interviews, and more.
+Your project evaluation process also gives you the opportunity to get a lot of 
+feedback on your code!
+
+> There are often links to other suggested courses, videos, references, etc, 
+> embedded in the items on the portal. That's what I'd like to see in a list 
+> because it's too easy to lose track when navigating many, many linked and inter-
+> linked web pages.
+
+That might be a good thing to keep track of. I would take notes in a notepad file 
+or doc to help you remember what you want to check out or view later.
+
+> Who may I email regarding other course options? Perhaps several shorter courses 
+> I can take consecutively?
+
+I would scroll through our [Course Catalog][catalog]. There you can find 
+everything from Intro to Computer Science to Intro to Machine Learning, and course
+lengths are listed on the respective course page. However, if you are just 
+starting out, I would recommend taking our Intro to Programming and Programming 
+Foundations with Python *first* before beginning this Nanodegree.
+
+> If you could recommend a book on learning Swift that one can use to learn and 
+> practice while taking these courses, what would it be?
+
+I would start [here][applebook], at Apple’s The Swift Programming Language.
+
+
 ## Actions and Outlets
 
 Eden and Chrisna did a demo!
 
 ### Introduction
+
+Actions and outlets can be a bit confusing at first, so we talked about the 
+differences between them and when to use which. 
+
+We know that we can connect views on the storyboard with pieces of code in the 
+assistant editor, but when should these connections be outlets, and when should 
+they be actions? Does every view need an outlet? Does every view need an action? 
+When should we use both? 
+
+Outlets, in code, are a representation of a view that we see. They are properties 
+of the view controller that they’re in. And they in turn, have attributes that can 
+be changed, and those changes are then reflected as we use the app.
+Actions, in code, are a representation of a physical action that we, the user, take. 
+Like clicking a button. They are always connected with a method in the view 
+controller. 
+
+Does every view need an outlet? No. You might not necessarily want to use or change 
+anything about a certain view. 
+Does every view need an action? Nope. Not everything we touch on an app needs to 
+trigger some thing to occur.
+A view can have both, if you’d like: when you need a reference to that view AND 
+when you want a user’s interaction with that view to trigger something.
+
 
 ### Actions
 
@@ -129,6 +188,45 @@ demo.
 
 ### Outlets
 
+Here’s what you see when creating an outlet:
+
+- Name: This is where you choose a name for the outlet
+- Object: This is just the object in which we’re currently creating the outlet
+- Type: Will always be the type of UI element that you’re making an outlet from
+- Storage: This has to do with memory management. See Strong vs. Weak, below. 
+
+####Strong vs. Weak
+
+The strong and weak pointer system is a way to allocate and deallocate memory 
+that tries to minimize loss, while still being efficient. 
+Both weak and strong pointers can point to an object. By “pointing to an 
+object”, they are able to see and use it. If no pointers are pointing to an 
+object, that object is not being used by anyone, and it makes sense that we’d 
+want to reallocate that space to other things. So how do we make sure we don’t 
+get a loop of pointers, each one pointing to the next until it goes full circle? 
+That loop could be separated off on its own, not being used by the main program 
+and just taking up space. So how can we prevent something like this? Well, 
+we’ll allocate some pointers with actual power, and some pointers without any 
+real power. Pointers with actual power are the decision-makers. Pointers with no
+real power can see an object, but they don’t have any say in whether it gets 
+thrown out or not. Imagine this: 
+
+If I put a piece of artwork out on the side of the street, I can still see it 
+from my window. I could also see it if I stood there on the side of the street 
+while holding it. When the garbage truck comes though, if no one is holding that 
+artwork, it’s going to get thrown out. It really wouldn’t matter how many people 
+are watching from the window— if there’s not at least one person holding onto the 
+artwork, the trash collectors are going to take it away. 
+
+So as you could probably guess, the people watching from the window have no real 
+power, they are the “weak” pointers. The people holding onto the artwork on the 
+street— they are keeping it from getting taken away, and are the “strong” 
+pointers. If at least one strong pointer is pointing to an object, it won’t get 
+taken away (or deallocated), regardless of whether 1, 10, or 0 weak pointers are 
+pointing to it. If there are no strong pointers pointing to an object, it will 
+get thrown away, also regardless of whether 1, 10, or 0 weak pointers are 
+pointing to it. 
+
 ### Outlet Collections
 
 Outlet collections are an array of outlets. You can use them if you want to do
@@ -163,7 +261,40 @@ when I created an outlet collection of Switches, the array type was
 
 Gabrielle joined us for an extended question and answer period after the demo:
 
+> For all the effort Swift puts into making the code more readable as English, 
+`if let` is totally confusing. Can you explain it please?
+
+Sure! So `if let` is an example of optional binding. Essentially, what optional 
+binding does is check for a value inside an optional and then extract that value 
+into a constant or variable all in one single action. 
+So:
+```
+if let constantName = someOptional {
+      statements
+}
+
+```
+
+For example:
+
+```
+if let actualNumber = possibleNumber.toInt() {
+	println("\'\(possibleNumber)\' has an integer value of \(actualNumber)")
+} else {
+	println("\'\(possibleNumber)\' could not be converted to an integer")
+}
+
+```
+
+> Will there be an office hours session on optionals?
+
+There certainly will! We’ll be doing Optionals in a few weeks.
+
+
 [hangout]: https://plus.google.com/u/0/events/c824hakd0ntm4maenep575897e8
 [portal]: https://www.udacity.com/course/nd003
 [actions]: https://github.com/ccrazy88/actions-and-outlets
 [dash]: http://kapeli.com/dash
+[catalog]: https://www.udacity.com/courses#!/all
+[applebook]: https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
+[thebasics]: https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html
