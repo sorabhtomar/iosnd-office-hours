@@ -163,7 +163,87 @@ when I created an outlet collection of Switches, the array type was
 
 Gabrielle joined us for an extended question and answer period after the demo:
 
+### INSERT QUESTION ABOUT IF/LET HERE
+
+> Can you demonstrate how to unwind to a previous screen from a button on a
+> second screen in swift or is it as simple as just dragging and connecting
+> from the button on the second screen to the ViewController of the first
+> screen?
+
+I'm assuming here that, by unwinding, your scenes are inside a
+`UINavigationController`.
+
+You would create an action in your second scene's view controller from that
+button. In that action, you would use the (optional) property
+`navigationController`, which, according to the [documentation][vc], gives you
+the "closest" navigation controller. Then, once you have access to the
+navigation controller, you would call the `popViewControllerAnimated(_:)`
+function, which is documented [here][nc].
+
+> All are instance variables public? In Objective-C, public properties were
+> declared in the .h file. How do public/private variables work in Swift?
+
+In Swift, there's public access, internal access, and private access. Things
+are internal access by default, which means that any source file in the module
+(usually your app) can access it. Most developers recommend making everything
+private unless it doesn't have to be, which means that access is restricted to
+the file itself. Public means that other modules can import your code and use
+your classes and functions and properties. More details can be found in Apple's
+[Swift Programming Language][swift] book.
+
+> In the color switcher, the View (the color block) was shown in the outline
+> nested within another View item. I didn't see what made that happen and the
+> one I added was at the same level as the other elements. Why the difference?
+> Any significance?
+
+No significance other than it was an easy way to put a border around the color
+view.
+
+> Are we going to cover any Apple Watch concepts in the course -- or a
+> follow-up optional course/lesson? I'd love to do it as part of the final
+> project.
+
+Maybe in the future, but we have no concrete plans yet to cover it. You're more
+than welcome to have an Apple Watch app be part of your final project, however!
+
+> Will this course guide us on how to place our apps in the App Store and
+> working with iTunes Connect?
+
+The fifth course, which has not yet been released, will touch on that.
+
+> How many students are in the March cohort?
+
+Several hundred! This number will go up and down while free trials end, so
+we'll have better numbers to report in a week or two.
+
+### INSERT OTHER QUESTIONS AND ANSWERS HERE
+
+> Is it safe to use a syntax like "for touch in event.allTouches()?.allObjects
+> as? \[UITouch\] {..." rather than making the constant touches?
+
+As of Xcode 6.2, you're not actually allowed to do this. This is because what
+you have at the end is of type `[UITouch]?`, which is something that you can't
+iterate through. What you can do is use the `??` operator, so you'd have
+something like `for touch in event.allTouches()?.allObjects as? [UITouch] ??
+[]`, but I prefer the `if`/`let` syntax.
+
+> Could you provide instructions afterwards on getting and installing "Dash"
+> into Xcode?
+
+It's a separate app available on the Mac App Store. Here's their [site][dash].
+
+> It may not be possible to do this for developers coming from other languages,
+> but could you please make comparisons between Swift and Objective-C where you
+> think this might be needed?
+
+For this particular demo, there aren't that many differences. I've uploaded an
+Objective-C version of the demo [here][actions-objc].
+
 [hangout]: https://plus.google.com/u/0/events/c824hakd0ntm4maenep575897e8
 [portal]: https://www.udacity.com/course/nd003
 [actions]: https://github.com/ccrazy88/actions-and-outlets
 [dash]: http://kapeli.com/dash
+[swift]: https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AccessControl.html
+[vc]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/#//apple_ref/occ/instp/UIViewController/navigationController
+[nc]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UINavigationController_Class/
+[actions-objc]: https://github.com/ccrazy88/actions-and-outlets-objc
