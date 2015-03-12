@@ -126,6 +126,7 @@ When should we use both?
 Outlets, in code, are a representation of a view that we see. They are properties 
 of the view controller that they’re in. And they in turn, have attributes that can 
 be changed, and those changes are then reflected as we use the app.
+
 Actions, in code, are a representation of a physical action that we, the user, take. 
 Like clicking a button. They are always connected with a method in the view 
 controller. 
@@ -195,7 +196,7 @@ Here’s what you see when creating an outlet:
 - Type: Will always be the type of UI element that you’re making an outlet from
 - Storage: This has to do with memory management. See Strong vs. Weak, below. 
 
-####Strong vs. Weak
+#####Strong vs. Weak
 
 The strong and weak pointer system is a way to allocate and deallocate memory 
 that tries to minimize loss, while still being efficient. 
@@ -210,13 +211,15 @@ we’ll allocate some pointers with actual power, and some pointers without any
 real power. Pointers with actual power are the decision-makers. Pointers with no
 real power can see an object, but they don’t have any say in whether it gets 
 thrown out or not. Imagine this: 
-
+```
 If I put a piece of artwork out on the side of the street, I can still see it 
 from my window. I could also see it if I stood there on the side of the street 
 while holding it. When the garbage truck comes though, if no one is holding that 
 artwork, it’s going to get thrown out. It really wouldn’t matter how many people 
 are watching from the window— if there’s not at least one person holding onto the 
 artwork, the trash collectors are going to take it away. 
+
+```
 
 So as you could probably guess, the people watching from the window have no real 
 power, they are the “weak” pointers. The people holding onto the artwork on the 
