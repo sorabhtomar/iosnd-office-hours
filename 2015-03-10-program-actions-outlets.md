@@ -218,9 +218,7 @@ while holding it. When the garbage truck comes though, if no one is holding that
 artwork, it’s going to get thrown out. It really wouldn’t matter how many people 
 are watching from the window— if there’s not at least one person holding onto the 
 artwork, the trash collectors are going to take it away. 
-
 ```
-
 So as you could probably guess, the people watching from the window have no real 
 power, they are the “weak” pointers. The people holding onto the artwork on the 
 street— they are keeping it from getting taken away, and are the “strong” 
