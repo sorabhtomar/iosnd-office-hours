@@ -13,4 +13,5 @@ happen every Tuesday at 5pm Pacific Time.
 
 [1]: 2015-03-10-program-actions-outlets.md
 
-- 3/17: James and Jessica discuss Size Classes, different methods to set constraints, and how to manage constraint warnings. 
+- [3/17][2]: James and Jessica discussed Size Classes, different methods to set constraints, and how to manage constraint warnings. When reviewing the transcipt for this Office Hours, please download the pdf in order to access the hyperlinks. 
+[2]: https://github.com/udacity/iosnd-office-hours/blob/master/2015-03-17-auto-layout.pdf
