@@ -13,4 +13,4 @@ happen every Tuesday at 5pm Pacific Time.
 
 [1]: 2015-03-10-program-actions-outlets.md
 
-- [3/17]: James and Jessica discuss Size Classes, different methods to set constraints, and how to manage constraint warnings. 
+- 3/17: James and Jessica discuss Size Classes, different methods to set constraints, and how to manage constraint warnings. 
